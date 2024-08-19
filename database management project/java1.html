@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Login Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            /* Center items vertically */
+            height: 100vh;
+            background: url(toni-zaat-MP56QwyNC8c-unsplash.jpg) no-repeat center center/cover;
+        }
+
+        .project-name {
+            font-size: 45px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            position: absolute;
+            top: 8%;
+        }
+
+        .project-name h1 {
+            font-size: 50px;
+            color: white;
+            text-shadow: 2px 2px 3px black;
+            /* text-decoration: underline; */
+        }
+
+        .login-container {
+            display: flex;
+            justify-content: space-between;
+            /* Align login boxes on left and right */
+            width: 80%;
+        }
+
+        .login-box {
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 48%;
+            height: 300px;
+            margin: 10px;
+            width: 450px;
+            border-radius: 10px;
+            /* Set the width for each login box */
+        }
+
+        .login-box h2 {
+            margin: 0;
+            padding: 10px 0;
+        }
+
+        .login-box input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        .login-box button {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        .customer-login {
+            background-color: #007BFF;
+            color: #fff;
+        }
+
+        .customer-login a {
+            color: white;
+        }
+
+        .seller-login {
+            background-color: #FF5733;
+            color: #fff;
+        }
+
+        .seller-login a {
+            color: white;
+        }
+
+        /* ... (Your CSS styles here) ... */
+    </style>
+</head>
+
+<body>
+    <div class="project-name">
+        <h1>Product Price Comparison</h1>
+    </div>
+    <div class="login-container">
+        <div class="login-box">
+            <h2>Customer Login</h2>
+            <form id="customer-login-form">
+                <input type="text" name="customer_username" placeholder="Customer Username" required>
+                <input type="password" name="customer_password" placeholder="Customer Password" required>
+                <button type="button" class="customer-login">Login as Customer</button>
+            </form>
+        </div>
+        <div class="login-box">
+            <h2>Seller Login</h2>
+            <form id="seller-login-form">
+                <input type="text" name="seller_username" placeholder="Seller Username" required>
+                <input type="password" name="seller_password" placeholder="Seller Password" required>
+                <button type="button" class="seller-login">Login as Seller</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Add JavaScript functionality here
+        document.addEventListener("DOMContentLoaded", function () {
+            const customerForm = document.getElementById("customer-login-form");
+            const sellerForm = document.getElementById("seller-login-form");
+
+            customerForm.addEventListener("submit", function (event) {
+                event.preventDefault();
+                const username = customerForm.elements.customer_username.value;
+                const password = customerForm.elements.customer_password.value;
+                // Perform form submission or validation here
+                console.log("Customer Login: Username - " + username + ", Password - " + password);
+                // You can use AJAX to send the data to the server if needed.
+            });
+
+            sellerForm.addEventListener("submit", function (event) {
+                event.preventDefault();
+                const username = sellerForm.elements.seller_username.value;
+                const password = sellerForm.elements.seller_password.value;
+                // Perform form submission or validation here
+                console.log("Seller Login: Username - " + username + ", Password - " + password);
+                // You can use AJAX to send the data to the server if needed.
+            });
+        });
+    </script>
+</body>
+
+</html>

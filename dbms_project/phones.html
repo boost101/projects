@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phone Comparison</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            width: 400px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .compare-button {
+            display: block;
+            width: 100%;
+            background-color: #4caf50;
+            color: #fff;
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-align: center;
+            transition: background-color 0.2s;
+        }
+
+        .compare-button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Phone Comparison</h2>
+        <form>
+            <div class="form-group">
+                <label for="phone1">Select Phone 1:</label>
+                <select id="phone1" name="phone1">
+                    <option value="iPhone 13">iPhone 13</option>
+                    <option value="Samsung Galaxy S21">Samsung Galaxy S21</option>
+                    <option value="Google Pixel 6">Google Pixel 6</option>
+                    <option value="OnePlus 9 Pro">OnePlus 9 Pro</option>
+                    <option value="Xiaomi Mi 11">Xiaomi Mi 11</option>
+                    <option value="Sony Xperia 1 III">Sony Xperia 1 III</option>
+                    <!-- You can add more phone options here -->
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="phone2">Select Phone 2:</label>
+                <select id="phone2" name="phone2">
+                    <option value="iPhone 13">iPhone 13</option>
+                    <option value="Samsung Galaxy S21">Samsung Galaxy S21</option>
+                    <option value="Google Pixel 6">Google Pixel 6</option>
+                    <option value="OnePlus 9 Pro">OnePlus 9 Pro</option>
+                    <option value="Xiaomi Mi 11">Xiaomi Mi 11</option>
+                    <option value="Sony Xperia 1 III">Sony Xperia 1 III</option>
+                    <!-- You can add more phone options here -->
+                </select>
+            </div>
+            <button type="button" class="compare-button" onclick="comparePhones()">Compare</button>
+        </form>
+    </div>
+
+    <script>
+        // JavaScript function to compare selected phones
+        function comparePhones() {
+            const phone1 = document.getElementById('phone1').value;
+            const phone2 = document.getElementById('phone2').value;
+
+            // You can add your comparison logic here
+            // For example, you can display the compared details in a new page or modal.
+            alert(`Comparing ${phone1} and ${phone2}`);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sports Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="back">
+        <div class="left">
+            <img src="{{ url_for('static', filename='img1.jpg') }}" alt="Sport Image 1">
+        </div>
+        <div class="container">
+            <h1 id="h1">Predict the Best Sport for You</h1>
+            <form id="prediction-form" action="/predict" method="POST">
+                <!-- Form fields for user input -->
+                <label for="height_cm">Height (cm):</label>
+                <input type="number" id="height_cm" name="Height (cm)" required placeholder="Enter height in cm" class="inp" step="0.01">
+
+                <label for="weight_kg">Weight (kg):</label>
+                <input type="number" id="weight_kg" name="Weight (kg)" required placeholder="Enter weight in kg" class="inp" step="0.01">
+
+                <label for="bmi">BMI (kg/m^2):</label>
+                <input type="number" id="bmi" name="BMI (kg/m^2)" required placeholder="Enter BMI" class="inp" step="0.01">
+
+                <label for="muscle_flexibility">Muscle Flexibility:</label>
+                <input type="number" id="muscle_flexibility" name="Muscle Flexibility" required placeholder="Enter Muscle Flexibility" class="inp" step="0.01">
+
+                <label for="agility">Agility:</label>
+                <input type="number" id="agility" name="Agility" required placeholder="Enter agility" class="inp" step="0.01">
+                
+                <label for="age">Age:</label>
+                <input type="number" id="age" name="Age" required placeholder="Enter Age" class="inp" step="0.01">
+                
+                <label for="endurance">Endurance:</label>
+                <input type="number" id="endurance" name="Endurance" required placeholder="Enter Endurance" class="inp" step="0.01">
+
+                <label for="reaction_time">Reaction Time:</label>
+                <input type="number" id="reaction_time" name="Reaction Time" required placeholder="Enter Reaction Time" class="inp" step="0.01">
+
+                <label for="strength">Strength:</label>
+                <input type="number" id="strength" name="Strength" required placeholder="Enter Strength" class="inp" step="0.01">
+
+                <label for="coordination">Coordination:</label>
+                <input type="number" id="coordination" name="Coordination" required placeholder="Enter Coordination" class="inp" step="0.01">
+
+                <label for="speed">Speed:</label>
+                <input type="number" id="speed" name="Speed" required placeholder="Enter Speed" class="inp" step="0.01">
+
+                <label for="balance">Balance:</label>
+                <input type="number" id="balance" name="Balance" required placeholder="Enter Balance" class="inp" step="0.01">
+
+                <label for="gender">Gender:</label>
+                <select id="gender" name="Gender" required class="inp">
+                    <option value="0">Male</option>
+                    <option value="1">Female</option>
+                </select>
+
+                <button type="submit">Predict</button>
+            </form>
+        </div>
+        <div class="right">
+            <img src="{{ url_for('static', filename='img2.jpg') }}" alt="Sport Image 2">
+        </div>
+    </div>
+</body>
+</html>

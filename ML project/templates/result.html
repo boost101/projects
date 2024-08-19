@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Personalized sport prediction based on your physical attributes">
+    <meta name="keywords" content="sports, prediction, health, fitness">
+    <meta name="author" content="Your Name">
+    <title>Prediction Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <main class="result-container">
+        <h1>We have a suggestion for you!</h1>
+        <p class="result-text">Based on your input, the best sport for you is:</p>
+        <h2 class="predicted-sport">{{ predicted_sport }}</h2>
+        <div class="images">
+            <img src="{{ url_for('static', filename='sport.jpg') }}" alt="A recommended sport for you">
+        </div>
+        <a href="/" class="back-link">Try Again</a>
+    </main>
+</body>
+</html>

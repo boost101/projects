@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Watch Comparison</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            width: 400px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .compare-button {
+            display: block;
+            width: 100%;
+            background-color: #4caf50;
+            color: #fff;
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-align: center;
+            transition: background-color 0.2s;
+        }
+
+        .compare-button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Watch Comparison</h2>
+        <form>
+            <div class="form-group">
+                <label for="watch1">Select Watch 1:</label>
+                <select id="watch1" name="watch1">
+                    <option value="Watch 1">Watch 1</option>
+                    <option value="Watch 2">Watch 2</option>
+                    <option value="Watch 3">Watch 3</option>
+                    <option value="Watch 4">Watch 4</option>
+                    <option value="Watch 5">Watch 5</option>
+                    <!-- Add more watch options here -->
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="watch2">Select Watch 2:</label>
+                <select id="watch2" name="watch2">
+                    <option value="Watch 1">Watch 1</option>
+                    <option value="Watch 2">Watch 2</option>
+                    <option value="Watch 3">Watch 3</option>
+                    <option value="Watch 4">Watch 4</option>
+                    <option value="Watch 5">Watch 5</option>
+                    <!-- Add more watch options here -->
+                </select>
+            </div>
+            <button type="button" class="compare-button" onclick="compareWatches()">Compare</button>
+        </form>
+    </div>
+
+    <script>
+        // JavaScript function to compare selected watches
+        function compareWatches() {
+            const watch1 = document.getElementById('watch1').value;
+            const watch2 = document.getElementById('watch2').value;
+
+            // You can add your comparison logic here
+            // For example, you can display the compared details in a new page or modal.
+            alert(`Comparing ${watch1} and ${watch2}`);
+        }
+    </script>
+</body>
+</html>

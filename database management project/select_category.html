@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Select a Product Category</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: url(onur-binay-_RpPMkqTTTg-unsplash.jpg)no-repeat center center/cover;
+        }
+
+        .category-selection {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        h1 {
+            margin: 0;
+            padding: 10px 0;
+            font-size: 30px;
+        }
+
+        .category-selection select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        .category-selection button {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            background-color: #00CC00;
+            /* Green color */
+            color: #fff;
+            /* Text color */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="category-selection">
+        <h1>Select a Product Category</h1>
+        <form action="process_category_selection.php" method="post">
+            <select name="category" required>
+                <option value="laptops">Laptops</option>
+                <option value="watches">Watches</option>
+                <option value="mobiles">Mobiles</option>
+                <option value="tablets">Tablets</option>
+            </select>
+            <br>
+            <button type="submit">Select</button>
+        </form>
+    </div>
+</body>
+
+</html>
